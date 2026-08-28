@@ -1,0 +1,14 @@
+path,registrable_domains,source,note
+/llms.txt,1896102,crawl snapshot 2026-08,mass-market; likely SEO-plugin and platform auto-generation dominant
+/agents.md,15929,crawl snapshot 2026-08,
+/openapi.json,450,crawl snapshot 2026-08,root path only
+/.well-known/agent-card.json,135,crawl snapshot 2026-08,
+/.well-known/agent-skills/index.json,88,crawl snapshot 2026-08,
+/.well-known/api-catalog,84,crawl snapshot 2026-08,RFC 9727
+/.well-known/mcp/server-card.json,80,crawl snapshot 2026-08,
+/.well-known/auth.md,66,crawl snapshot 2026-08,~3 months after spec launch
+/.well-known/oauth-protected-resource,34,crawl snapshot 2026-08,RFC 9728
+/.well-known/oauth-authorization-server,32,crawl snapshot 2026-08,RFC 8414
+/.well-known/ucp,17,crawl snapshot 2026-08,
+/.well-known/acp.json,5,crawl snapshot 2026-08,
+/.well-known/http-message-signatures-directory,4,crawl snapshot 2026-08,Web Bot Auth
