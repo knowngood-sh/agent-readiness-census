@@ -1,0 +1,11 @@
+platform,probed,actionable_endpoint,actionable_pct,ci95_low_pct,ci95_high_pct,platform_supplied,serves_markdown,llms_txt,measured
+Wix,50,50,100,93,100,50,0,50,2026-09-17
+Shopify,46,46,100,92,100,46,0,46,2026-09-17
+Webflow,49,2,4,1,14,1,1,6,2026-09-17
+Squarespace,50,1,2,0,10,1,1,2,2026-09-17
+BigCommerce,50,0,0,0,7,0,45,4,2026-09-17
+Duda,50,0,0,0,7,0,0,47,2026-09-17
+WooCommerce,50,0,0,0,7,0,0,10,2026-09-17
+Ghost,50,0,0,0,7,0,0,7,2026-09-17
+WordPress,50,0,0,0,7,0,0,4,2026-09-17
+PrestaShop,48,0,0,0,7,0,0,1,2026-09-17

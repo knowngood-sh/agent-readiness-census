@@ -4,6 +4,70 @@ A monthly count of how much of the web actually implements the agent-ready
 standards — measured, not estimated. Maintained by [knowngood.sh](https://knowngood.sh),
 a search engine for AI agents that lists only probe-verified capabilities.
 
+## September 2026
+
+**Wix and Shopify serve a live MCP endpoint for every site they host, and the
+MCP server card finds none of them.**
+
+Canonical version, with the live index figures and the full method:
+**[knowngood.sh/census/2026-09](https://knowngood.sh/census/2026-09)**
+
+| File | What it is |
+|---|---|
+| [`census/2026-09.md`](census/2026-09.md) | the source document |
+| [`census/2026-09-platforms.csv`](census/2026-09-platforms.csv) | the platform sample: ten platforms x 50 tenants |
+| [`census/2026-09-figures.csv`](census/2026-09-figures.csv) | the standing index figures, rubric v1.1 |
+
+50 tenants per platform were probed on 17 September 2026, custom domains only,
+one date, one probe, with a 95% Wilson interval beside every rate:
+
+| Platform | Probed | Agent-actionable endpoint | 95% interval |
+|---|---:|---:|---|
+| Wix | 50 | **50 (100%)** | 93-100% |
+| Shopify | 46 | **46 (100%)** | 92-100% |
+| Webflow | 49 | 2 (4%) | 1-14% |
+| Squarespace | 50 | 1 (2%) | 0-10% |
+| BigCommerce | 50 | 0 | 0-7% |
+| Duda | 50 | 0 | 0-7% |
+| WooCommerce | 50 | 0 | 0-7% |
+| Ghost | 50 | 0 | 0-7% |
+| WordPress | 50 | 0 | 0-7% |
+| PrestaShop | 48 | 0 | 0-7% |
+
+### The reading
+
+**None of the 96 live endpoints was found through the MCP server card.** All
+96 were advertised through `/.well-known/ucp` on the tenant's own domain. A
+check that reads only the card records every one of these sites as having no
+MCP server - which is what August's count of 80 card-serving domains was
+measuring, and it is why the two months are not the same question.
+
+**Platform-supplied means one decision, not fifty.** Each platform registers
+one identical tool signature for every tenant. That is a supplier switching
+something on, not a population of site owners adopting it, and the
+`platform_supplied` column says which is which.
+
+**Readable is not callable.** BigCommerce is the mirror image: 45 of 50 serve
+markdown when an agent asks for it, and none is callable.
+
+### Why two CSVs this month
+
+August was one table: a path, and how many registrable domains serve it.
+September is two measurements that do not share a schema - a sampled platform
+study and the index's own standing figures - so each gets **its own file with
+its own header row**. One file holding two tables separated by a blank line
+was tried and rejected: that is a container format, not a CSV, and no
+spreadsheet or `csv.DictReader` reads it correctly unaided.
+
+Both files carry a `measured` column, because the two were measured on
+different dates and a census row without its date is not a census row.
+
+Two printed cells hold two measurements each and are **split into separate
+numeric columns**: `50 (100%)` becomes `actionable_endpoint` and
+`actionable_pct`, and `93-100%` becomes `ci95_low_pct` and `ci95_high_pct`.
+August's file is plain numbers and a reader comparing two months should not
+need two parsers. Everything else is the columns as printed.
+
 ## August 2026
 
 Registrable domains serving each capability path, counted from an August
@@ -86,7 +150,7 @@ as `KnownGood-Verifier` with a contact URL and honour robots.txt and
 
 ## Cadence
 
-Monthly. Next: September 2026.
+Monthly. Next: October 2026.
 
 ---
 
