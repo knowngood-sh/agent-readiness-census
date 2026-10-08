@@ -1,0 +1,6 @@
+mechanism,sites,measured
+/.well-known/ard.json referenced,111,2026-09-28
+Agentmap: directive in robots.txt,241,2026-09-28
+"<link rel=""ard""> in the page head",90,2026-09-28
+"rel=""ai-catalog"" without rel=""ard"", the predecessor alone",172,2026-09-28
+Any mechanism,355,2026-09-28

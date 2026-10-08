@@ -4,6 +4,29 @@ A monthly count of how much of the web actually implements the agent-ready
 standards — measured, not estimated. Maintained by [knowngood.sh](https://knowngood.sh),
 a search engine for AI agents that lists only probe-verified capabilities.
 
+## October 2026
+
+**57,266 websites can be read or acted on by an AI agent, out of 95,529 we asked.**
+
+Canonical version, with the live index figures and the full method:
+**[knowngood.sh/census/2026-10](https://knowngood.sh/census/2026-10)**
+
+| File | What it is |
+|---|---|
+| [`census/2026-10.md`](census/2026-10.md) | the document, as the canonical page publishes it |
+| [`census/2026-10-funnel.csv`](census/2026-10-funnel.csv) | How many websites are agent-ready? (6 rows) |
+| [`census/2026-10-mcp-sources.csv`](census/2026-10-mcp-sources.csv) | Who built those servers? (4 rows) |
+| [`census/2026-10-ard.csv`](census/2026-10-ard.csv) | What is ARD, and how many sites publish it? (5 rows) |
+
+| Stage | Hosts |
+|---|---:|
+| In scope | 104,578 |
+| Asked | 95,529 |
+| Declined (robots.txt or an AI-use signal) | 606 |
+| Could not be asked | 2,382 |
+| A valid door answered | 83,917 |
+| Listed under rubric v1.2 | 57,266 |
+
 ## September 2026
 
 **Wix and Shopify serve a live MCP endpoint for every site they host, and the
