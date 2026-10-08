@@ -173,7 +173,7 @@ as `KnownGood-Verifier` with a contact URL and honour robots.txt and
 
 ## Cadence
 
-Monthly. Next: October 2026.
+Monthly. Next: November 2026.
 
 ---
 
