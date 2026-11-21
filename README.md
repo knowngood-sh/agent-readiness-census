@@ -17,6 +17,7 @@ Canonical version, with the live index figures and the full method:
 | [`census/2026-10-funnel.csv`](census/2026-10-funnel.csv) | How many websites are agent-ready? (6 rows) |
 | [`census/2026-10-mcp-sources.csv`](census/2026-10-mcp-sources.csv) | Who built those servers? (4 rows) |
 | [`census/2026-10-ard.csv`](census/2026-10-ard.csv) | What is ARD, and how many sites publish it? (5 rows) |
+| [`census/2026-10-ard-hosts.csv`](census/2026-10-ard-hosts.csv) | the 355 hosts behind those counts, by mechanism (added 21 Nov 2026) |
 
 | Stage | Hosts |
 |---|---:|
@@ -26,6 +27,31 @@ Canonical version, with the live index figures and the full method:
 | Could not be asked | 2,382 |
 | A valid door answered | 83,917 |
 | Listed under rubric v1.2 | 57,266 |
+
+### The ARD host file (added 21 Nov 2026)
+
+`census/2026-10-ard-hosts.csv` has three columns: `host`, `mechanism` and
+`probed`, the UTC date that host's probe ran. There is one row per host and
+mechanism, so a host that uses two mechanisms has two rows. Its 355 distinct
+hosts are the "Any mechanism" row of `census/2026-10-ard.csv`. Like every
+file here it has a header row and nothing else, so `csv.DictReader` reads it
+unaided. The definitions go here, not in the file:
+
+- `/.well-known/ard.json referenced`: an `Agentmap:` value in robots.txt, or a
+  `<link>` href in the page head, contains that path (111 hosts).
+- `Agentmap: directive in robots.txt`: robots.txt carries an `Agentmap:` line,
+  whatever it points to (241).
+- `<link rel="ard"> in the page head` (90).
+- `rel="ai-catalog" in the page head`, the predecessor rel. It is counted
+  wherever it appears (229). 57 of those hosts also carry `rel="ard"`. The
+  other 172 are the "predecessor alone" row of `census/2026-10-ard.csv`.
+
+**Referenced, not parsed.** Each row records that a host's robots.txt or page
+head refers to ARD. It does not record that the file referred to exists, or
+that it is valid ARD: none of these files was parsed for this count. The
+probe's own request for `/.well-known/ard.json` is a separate measurement and
+is not in this file. The population is the 92,541 hosts whose robots.txt
+allowed the probe, from stored rows of the October pass, with no new fetch.
 
 ## September 2026
 
