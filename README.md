@@ -28,6 +28,17 @@ Canonical version, with the live index figures and the full method:
 | A valid door answered | 83,917 |
 | Listed under rubric v1.2 | 57,266 |
 
+### The census as a dataset (added 21 Nov 2026)
+
+The census is also published as a dataset, with Dean Goodman as its creator:
+
+- Zenodo: [doi:10.5281/zenodo.24211727](https://doi.org/10.5281/zenodo.24211727) (all versions; the 21 Nov 2026 release is
+  [doi:10.5281/zenodo.24211728](https://doi.org/10.5281/zenodo.24211728))
+- Hugging Face: [deangoodman/agent-readiness-census](https://huggingface.co/datasets/deangoodman/agent-readiness-census)
+
+Both deposits were made before `census/2026-10-ard-hosts.csv` was added, so
+neither contains it. That file is in this repository only.
+
 ### The ARD host file (added 21 Nov 2026)
 
 `census/2026-10-ard-hosts.csv` has three columns: `host`, `mechanism` and
